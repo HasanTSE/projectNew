@@ -1,0 +1,38 @@
+﻿@model Info
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Employee Details</h1>
+
+<div>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model=>model.Name)
+        </dt>
+        <dd>
+             @Html.DisplayFor(model=>model.Name)
+        </dd>
+
+         <dt class="col-sm-2">
+            @Html.DisplayNameFor(model=>model.NationId)
+        </dt>
+        <dd>
+             @Html.DisplayFor(model=>model.NationId)
+        </dd>
+
+           <dt class="col-sm-2">
+            @Html.DisplayNameFor(model=>model.IsActive)
+        </dt>
+        <dd>
+             @Html.DisplayFor(model=>model.IsActive)
+        </dd>
+        
+
+        </dl>
+</div>
+
+<div>
+    <a asp-action="Index">Back to the main page</a>
+</div>
