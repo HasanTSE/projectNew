@@ -10,6 +10,10 @@ namespace projectNew.Models
 
         public DbSet<Info> Infos { get; set; }
         public DbSet<Nation> Nations { get; set; }
+        public DbSet<Gender> Genders { get; set; }
+
+
+
 
 
     }

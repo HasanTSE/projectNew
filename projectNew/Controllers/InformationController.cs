@@ -19,7 +19,9 @@ namespace projectNew.Controllers
         public IActionResult Index()
         {
             var infoList = _db.Infos.Include(p => p.Nation).ToList();
+            var infoList1 = _db.Infos.Include(p => p.Gender).ToList();
             return View(infoList);
+            return View(infoList1);
         }
 
         public IActionResult Details(int? id)
@@ -42,6 +44,7 @@ namespace projectNew.Controllers
         public IActionResult Create()
         {
             ViewData["NationId"] = new SelectList(_db.Nations.Where(a => a.IsActive == true), "Id", "NationName");
+            ViewData["GenderId"] = new SelectList(_db.Genders, "Id", "GenderName");
             return View();
         }
 
@@ -58,6 +61,7 @@ namespace projectNew.Controllers
             }
 
             ViewData["NationId"] = new SelectList(_db.Nations.Where(a => a.IsActive == true), "Id", "NationName");
+            ViewData["GenderId"] = new SelectList(_db.Genders, "Id", "GenderName");
             return View(dataPass);
         }
 
@@ -74,6 +78,7 @@ namespace projectNew.Controllers
                 return NotFound();
             }
             ViewData["NationId"] = new SelectList(_db.Nations.Where(a => a.IsActive == true || a.Id==employee.NationId), "Id", "NationName", employee.NationId);
+            ViewData["GenderId"] = new SelectList(_db.Genders, "Id", "GenderName");
             return View(employee);
         }
 
@@ -97,6 +102,7 @@ namespace projectNew.Controllers
             }
 
             ViewData["NationId"] = new SelectList(_db.Nations, "Id", "NationName", employee.NationId);
+            ViewData["GenderId"] = new SelectList(_db.Genders, "Id", "GenderName", employee.GenderId);
             return View(employee);
         }
 
