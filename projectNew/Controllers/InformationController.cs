@@ -20,6 +20,12 @@ namespace projectNew.Controllers
         {
             var infoList = _db.Infos.Include(p => p.Nation).ToList();
             var infoList1 = _db.Infos.Include(p => p.Gender).ToList();
+            var infoList2 = _db.Infos.Include(p => p.PresentDistrict).ToList();
+            var infoList3 = _db.Infos.Include(p => p.ParmanentDistrict).ToList();
+            var infoList4 = _db.Infos.Include(p => p.BloodGroup).ToList();
+            //var infoList5 = _db.Infos.Include(p => p.Company).ToList();
+            //var infoList6 = _db.Infos.Include(p => p.Department).ToList();
+            //var infoList7 = _db.Infos.Include(p => p.Designation).ToList();
             return View(infoList);
             return View(infoList1);
         }
@@ -45,6 +51,12 @@ namespace projectNew.Controllers
         {
             ViewData["NationId"] = new SelectList(_db.Nations.Where(a => a.IsActive == true), "Id", "NationName");
             ViewData["GenderId"] = new SelectList(_db.Genders, "Id", "GenderName");
+            ViewData["PresentDistrictId"] = new SelectList(_db.PreDistricts, "Id", "PresentDistrict");
+            ViewData["ParmanentDistrictId"] = new SelectList(_db.ParDistricts, "Id", "ParmanentDistrict");
+            ViewData["BloodGroupId"] = new SelectList(_db.Bloods, "Id", "BloodGroup");
+            ViewData["CompanyId"] = new SelectList(_db.Compas.Where(a => a.IsActive == true), "Id", "Company");
+            ViewData["DepartmentId"] = new SelectList(_db.Depts.Where(a => a.IsActive == true), "Id", "Department");
+            ViewData["DesignationId"] = new SelectList(_db.Desigs.Where(a => a.IsActive == true), "Id", "Designation");
             return View();
         }
 
@@ -61,7 +73,13 @@ namespace projectNew.Controllers
             }
 
             ViewData["NationId"] = new SelectList(_db.Nations.Where(a => a.IsActive == true), "Id", "NationName");
-            ViewData["GenderId"] = new SelectList(_db.Genders, "Id", "GenderName");
+            ViewData["GenderId"] = new SelectList(_db.Genders, "Id", "GenderName");//Gender=GenderId ViewData["Gender"]==edit dekhabe
+            ViewData["PresentDistrictId"] = new SelectList(_db.PreDistricts, "Id", "PresentDistrict");
+            ViewData["ParmanentDistrictId"] = new SelectList(_db.ParDistricts, "Id", "ParmanentDistrict");
+            ViewData["BloodGroupId"] = new SelectList(_db.Bloods, "Id", "BloodGroup");
+            ViewData["CompanyId"] = new SelectList(_db.Compas.Where(a => a.IsActive == true), "Id", "Company");
+            ViewData["DepartmentId"] = new SelectList(_db.Depts.Where(a => a.IsActive == true), "Id", "Department");
+            ViewData["DesignationId"] = new SelectList(_db.Desigs.Where(a => a.IsActive == true), "Id", "Designation");
             return View(dataPass);
         }
 
@@ -79,6 +97,12 @@ namespace projectNew.Controllers
             }
             ViewData["NationId"] = new SelectList(_db.Nations.Where(a => a.IsActive == true || a.Id==employee.NationId), "Id", "NationName", employee.NationId);
             ViewData["GenderId"] = new SelectList(_db.Genders, "Id", "GenderName");
+            ViewData["PresentDistrictId"] = new SelectList(_db.PreDistricts, "Id", "PresentDistrict");
+            ViewData["ParmanentDistrictId"] = new SelectList(_db.ParDistricts, "Id", "ParmanentDistrict");
+            ViewData["BloodGroupId"] = new SelectList(_db.Bloods, "Id", "BloodGroup");
+            ViewData["CompanyId"] = new SelectList(_db.Compas.Where(a => a.IsActive == true), "Id", "Company");
+            ViewData["DepartmentId"] = new SelectList(_db.Depts.Where(a => a.IsActive == true), "Id", "Department");
+            ViewData["DesignationId"] = new SelectList(_db.Desigs.Where(a => a.IsActive == true), "Id", "Designation");
             return View(employee);
         }
 
@@ -102,7 +126,15 @@ namespace projectNew.Controllers
             }
 
             ViewData["NationId"] = new SelectList(_db.Nations, "Id", "NationName", employee.NationId);
+            //ViewData["GenderId"] = new SelectList(_db.Genders, "Id", "GenderName", employee.GenderId);
             ViewData["GenderId"] = new SelectList(_db.Genders, "Id", "GenderName", employee.GenderId);
+            ViewData["PresentDistrictId"] = new SelectList(_db.PreDistricts, "Id", "PresentDistrict");
+            ViewData["ParmanentDistrictId"] = new SelectList(_db.ParDistricts, "Id", "ParmanentDistrict");
+            ViewData["BloodGroupId"] = new SelectList(_db.Bloods, "Id", "BloodGroup");
+            ViewData["CompanyId"] = new SelectList(_db.Compas.Where(a => a.IsActive == true), "Id", "Company");
+            ViewData["DepartmentId"] = new SelectList(_db.Depts.Where(a => a.IsActive == true), "Id", "Department");
+            ViewData["DesignationId"] = new SelectList(_db.Desigs.Where(a => a.IsActive == true), "Id", "Designation");
+
             return View(employee);
         }
 

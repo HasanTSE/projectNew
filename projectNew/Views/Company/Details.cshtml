@@ -1,0 +1,34 @@
+﻿@model Compa
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Company Details</h1>
+
+
+<div>
+    <dl class="row">
+
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model=>model.Company)
+        </dt>
+        <dd>
+             @Html.DisplayFor(model=>model.Company)
+        </dd>
+        
+        
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model=>model.IsActive)
+        </dt>
+        <dd>
+             @Html.DisplayFor(model=>model.IsActive)
+        </dd>
+        
+
+    </dl>
+</div>
+
+<div>
+    <a asp-action="Index">Back to the main page</a>
+</div>

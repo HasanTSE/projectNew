@@ -1,0 +1,41 @@
+﻿@model IEnumerable<Dept>
+
+@{
+    ViewData["Title"] = "Index";
+}
+ 
+
+<p>
+    <a asp-action="Create">Add Department</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th> @Html.DisplayNameFor(model=>model.Id) </th>
+            <th> @Html.DisplayNameFor(model=>model.Department) </th>
+            <th> @Html.DisplayNameFor(model=>model.IsActive) </th>
+
+            <th>Action</th>
+
+        </tr>
+    </thead>
+
+      <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@Html.DisplayFor(modelitem => item.Id)</td>
+                   <td>@Html.DisplayFor(modelitem => item.Department)</td>
+
+                     <td>@Html.DisplayFor(modelitem => item.IsActive)</td>
+                 <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Update </a>
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
