@@ -7,7 +7,7 @@
 <h2>Employee List</h2>
 
 <p>
-    <a asp-action="Create">Add Employee</a>
+    <a asp-action="Create"  class="btn btn-info">Add Employee</a>
 </p>
 
 
@@ -49,9 +49,9 @@
 
                 <td>@Html.DisplayFor(modelitem => item.IsActive)</td>
                 <td>
-                    <a asp-action="Edit" asp-route-id="@item.Id">Update </a>
-                    <a asp-action="Details" asp-route-id="@item.Id">Details</a>
-                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success">Update </a>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-primary">Details</a>
+                    <a asp-action="Delete" asp-route-id="@item.Id" class="btn btn-danger">Delete</a>
                 </td>
 
             </tr>

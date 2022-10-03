@@ -4,7 +4,7 @@
     ViewData["Title"] = "Create";
  }
 
-    <h1>Create Company</h1>
+    <h1 class="btn btn-info">Create Company</h1>
     <br/>
 
 
@@ -35,7 +35,10 @@
                <br />
 
             <div class="form-group">
-                    <input type="submit" value="Create" class="btn btn-primary"/>      
+
+                    <a asp-action="Index"class="btn btn-secondary">Back</a>
+                    <input type="submit" value="Create" class="btn btn-primary"/>
+                    
             </div>
            
 
@@ -43,8 +46,5 @@
             </form>
         </div>
         
-        <div>
-            <a asp-action="Index">Back</a>
-        </div>
-
+        
     </div>

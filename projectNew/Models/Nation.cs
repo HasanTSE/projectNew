@@ -9,10 +9,13 @@ namespace projectNew.Models
     {
         [Key]
         public int Id { get; set; }
-        
+
+
+        [Display(Name = "Nationality")]
         [StringLength(200)]
         public string NationName { get; set; }
 
+        [Display(Name = "Is active")]
         public bool IsActive { get; set; }
     }
 }

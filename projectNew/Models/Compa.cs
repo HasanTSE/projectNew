@@ -11,6 +11,7 @@ namespace projectNew.Models
         [StringLength(200)]
         public string Company { get; set; }
 
+        [Display(Name = "Is active")]
         public bool IsActive { get; set; }
     }
 }

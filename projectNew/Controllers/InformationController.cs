@@ -18,16 +18,15 @@ namespace projectNew.Controllers
 
         public IActionResult Index()
         {
-            var infoList = _db.Infos.Include(p => p.Nation).ToList();
-            var infoList1 = _db.Infos.Include(p => p.Gender).ToList();
-            var infoList2 = _db.Infos.Include(p => p.PresentDistrict).ToList();
-            var infoList3 = _db.Infos.Include(p => p.ParmanentDistrict).ToList();
-            var infoList4 = _db.Infos.Include(p => p.BloodGroup).ToList();
-            //var infoList5 = _db.Infos.Include(p => p.Company).ToList();
-            //var infoList6 = _db.Infos.Include(p => p.Department).ToList();
-            //var infoList7 = _db.Infos.Include(p => p.Designation).ToList();
-            return View(infoList);
-            return View(infoList1);
+            var infoList = _db.Infos.Include(p => p.Nation)
+                .Include(p => p.Gender)
+                .Include(p => p.PresentDistrict)
+                .Include(p => p.ParmanentDistrict)
+                .Include(p => p.BloodGroup)
+                .ToList();
+
+                return View(infoList);
+          
         }
 
         public IActionResult Details(int? id)
