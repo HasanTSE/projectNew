@@ -4,15 +4,29 @@
     ViewData["Title"] = "Create";
  }
 
-    <h1 class="btn btn-info">Create Department</h1>
-    <br/>
+ <div class="container">
+
+
+    <div class="row justify-content-md-center">
+   
+    <div class="col-md-auto">
+     <h1>Create Department</h1>
+    </div>
+    </div>
+ 
+     
+<br />
 
 
     <div class="row">
-        <div class="col-md-4">
+        <div>
             <form asp-action="Create">
 
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+
+                 <div class="row justify-content-md-center">
+                <div class="col-md-auto">
 
 
                   <div class="form-group">
@@ -40,7 +54,10 @@
                     <input type="submit" value="Create" class="btn btn-primary"/>
                     
             </div>
-           
+            
+
+            </div>
+            </div>
 
 
             </form>

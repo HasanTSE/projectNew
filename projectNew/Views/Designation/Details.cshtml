@@ -4,13 +4,24 @@
     ViewData["Title"] = "Details";
 }
 
-<h1>Designation Details</h1>
+<div class="container">
 
+    <div class="row justify-content-md-center">
+   
+    <div class="col-md-auto">
+    <h1>Designation Details</h1>
+    </div>
+    </div>
+ 
+    
+    <br/>
 
-<div>
-    <dl class="row">
+ 
 
-        <dt class="col-sm-2">
+        <div class="row justify-content-md-center">
+         <div class="col-md-auto">
+
+        <dt>
             @Html.DisplayNameFor(model=>model.Designation)
         </dt>
         <dd>
@@ -18,17 +29,20 @@
         </dd>
         
         
-        <dt class="col-sm-2">
+        <dt>
             @Html.DisplayNameFor(model=>model.IsActive)
         </dt>
         <dd>
              @Html.DisplayFor(model=>model.IsActive)
         </dd>
         
+        <div>
+    <a asp-action="Index" class="btn btn-info">Back to the main page</a>
+       </div>
 
     </dl>
 </div>
-
-<div>
-    <a asp-action="Index" class="btn btn-info">Back to the main page</a>
 </div>
+ 
+
+

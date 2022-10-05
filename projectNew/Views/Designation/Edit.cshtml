@@ -4,15 +4,25 @@
     ViewData["Title"] = "Edit";
 }
 
-<h1>Edit Designation</h1>
+<div class="container">
+
+
+    <div class="row justify-content-md-center">
+   
+    <div class="col-md-auto">
+     <h1>Edit Designation</h1>
+    </div>
+    </div>
+ 
 <br />
 
-<div class="row">
-     <div class="col-md-4">
+ 
             <form asp-action="Edit">
                  <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-
                        <input type="hidden" asp-for="Id" class="form-control" />
+
+                <div class="row justify-content-md-center">
+                <div class="col-md-auto">
 
                   <div class="form-group">
                         <label asp-for="Designation" class="control-label"></label>
@@ -27,8 +37,6 @@
                  </label> 
                  </div>
 
-
-
                <br />
 
             <div class="form-group">
@@ -36,7 +44,9 @@
             </div>
            
 
+            </div>
+            </div>
 
             </form>
         </div>
-        </div>
+    

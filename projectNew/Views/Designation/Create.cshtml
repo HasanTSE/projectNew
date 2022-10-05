@@ -4,16 +4,28 @@
     ViewData["Title"] = "Create";
  }
 
-    <h1 class="btn btn-info">Create Designation</h1>
+ <div class="container">
+
+
+    <div class="row justify-content-md-center">
+   
+    <div class="col-md-auto">
+     <h1>Create Designation</h1>
+    </div>
+    </div>
+ 
+    
     <br/>
 
 
     <div class="row">
-        <div class="col-md-4">
+        <div>
             <form asp-action="Create">
 
                 <div asp-validation-summary="ModelOnly" class="text-danger"></div>
 
+                <div class="row justify-content-md-center">
+                <div class="col-md-auto">
 
                   <div class="form-group">
                         <label asp-for="Designation" class="control-label"></label>
@@ -41,6 +53,8 @@
                     
             </div>
 
+            </div>
+            </div>
 
             </form>
         </div>

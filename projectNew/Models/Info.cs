@@ -104,7 +104,7 @@ namespace projectNew.Models
         /// ///////
         /// </summary>
         /// 
-        [Display(Name = "নিজের নাম বাংলায়")]
+        [Display(Name = "নিজের নাম")]
         [StringLength(200)]
         public string? NameBn { get; set; }
 
@@ -112,7 +112,7 @@ namespace projectNew.Models
         [StringLength(200)]
         public string? FathersName { get; set; }
 
-        [Display(Name = "পিতার-নাম বাংলায়")]
+        [Display(Name = "পিতার-নাম")]
         [StringLength(200)]
         public string? FathersNameBn { get; set; }
 
@@ -121,7 +121,7 @@ namespace projectNew.Models
         [StringLength(200)]
         public string? MothersName { get; set; }
 
-        [Display(Name = "মাতার-নাম বাংলায়")]
+        [Display(Name = "মাতার-নাম")]
         [StringLength(200)]
         public string? MothersNameBn { get; set; }
 
